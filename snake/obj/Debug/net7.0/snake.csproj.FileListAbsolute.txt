@@ -1,0 +1,15 @@
+/home/paulo/Projetos/snake/snake/bin/Debug/net7.0/snake
+/home/paulo/Projetos/snake/snake/bin/Debug/net7.0/snake.deps.json
+/home/paulo/Projetos/snake/snake/bin/Debug/net7.0/snake.runtimeconfig.json
+/home/paulo/Projetos/snake/snake/bin/Debug/net7.0/snake.dll
+/home/paulo/Projetos/snake/snake/bin/Debug/net7.0/snake.pdb
+/home/paulo/Projetos/snake/snake/obj/Debug/net7.0/snake.csproj.AssemblyReference.cache
+/home/paulo/Projetos/snake/snake/obj/Debug/net7.0/snake.GeneratedMSBuildEditorConfig.editorconfig
+/home/paulo/Projetos/snake/snake/obj/Debug/net7.0/snake.AssemblyInfoInputs.cache
+/home/paulo/Projetos/snake/snake/obj/Debug/net7.0/snake.AssemblyInfo.cs
+/home/paulo/Projetos/snake/snake/obj/Debug/net7.0/snake.csproj.CoreCompileInputs.cache
+/home/paulo/Projetos/snake/snake/obj/Debug/net7.0/snake.dll
+/home/paulo/Projetos/snake/snake/obj/Debug/net7.0/refint/snake.dll
+/home/paulo/Projetos/snake/snake/obj/Debug/net7.0/snake.pdb
+/home/paulo/Projetos/snake/snake/obj/Debug/net7.0/snake.genruntimeconfig.cache
+/home/paulo/Projetos/snake/snake/obj/Debug/net7.0/ref/snake.dll
