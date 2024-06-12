@@ -31,7 +31,6 @@ public class NewFrame
             Console.WriteLine("|");
             }
             Console.WriteLine("________________________________");
-            Console.WriteLine("Dentro do frame");
             return;
         }
     }
