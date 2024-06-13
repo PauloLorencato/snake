@@ -23,17 +23,14 @@ while (running)
     if(newFood.IsEaten == true)
     {
         newFood.CreateFood();
-        string foodPlace = newFood.Place[0].ToString() + "," + newFood.Place[1].ToString();
-        while(Array.IndexOf(snake.Changes, foodPlace) != -1)
+        while(snake.Changes.IndexOf(newFood.Place) != -1)
         {
             newFood.CreateFood();
-            foodPlace = newFood.Place[0].ToString() + "," + newFood.Place[1].ToString();
         }
-        newFood.IsEaten = false;
     }
 
     //set snake movement by direction
-
+    snake.MoveSnake(control.Direction, newFood.IsEaten);
     //if snake eats food, increase snake and set IsEaten as true
 
     //if snake hits wall, die (finish program)

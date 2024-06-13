@@ -4,6 +4,14 @@ namespace Control;
 
 public class NewControl
 {
+    public int[] Direction;
+
+    public NewControl()
+    {
+        Direction = new int[2];
+        Direction[0] = 0;
+        Direction[1] = 1;
+    }
     public void SetSnake(string control, ref int[,] snake)
     {
         switch(control)

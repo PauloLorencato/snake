@@ -20,6 +20,7 @@ namespace Food
             var coord = new Random();
             Place[0] = coord.Next(15);
             Place[1] = coord.Next(15);
+            IsEaten = false;
         }
     }
 }
