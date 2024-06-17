@@ -44,17 +44,27 @@ namespace Snake
 
         public void MoveSnake(int[] direction, bool ate)
         {
+            bool CheckRange(int[] array)
+            {
+                return array[0] > 14 || array[0] < 0 || array[1] > 14 || array[1] < 0;
+            }
             int[] bounds = Changes[^1];
-            if(bounds[0] >= 14 || bounds[0] <= 0 || bounds[1] >=14 || bounds[1] <= 0)
+            if(CheckRange(bounds))
             {
                 IsDead = true;
                 return;
             }
+            
             int[] coords = new int[2];
             coords[0] = Changes[^1][0] + direction[0];
             coords[1] = Changes[^1][1] + direction[1];
-            SnakeBody[coords[0], coords[1]] = dot;
+            if(!CheckRange(coords))
+            {
+                SnakeBody[coords[0], coords[1]] = dot;
+            }            
             Changes.Add(coords);
+            Console.WriteLine(coords[0].ToString());
+                        
             if(!ate)
             {
                 SnakeBody[Changes[0][0], Changes[0][1]] = "";

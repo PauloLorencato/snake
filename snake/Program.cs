@@ -24,9 +24,6 @@ bool running = true;
 controlThread.Start();
 while (running)
 {
-    //if snake hits wall, die (finish program)
-    snake.KillSnake();
-
     //if snake eats food, increase snake and set IsEaten as true
     snake.FeedSnake(ref newFood);      
 
@@ -38,6 +35,9 @@ while (running)
 
     //print current game state to frame
     newFrame.DrawFrame(ref snake.SnakeBody, ref newFood.Place);
+
+    //if snake hits wall, die (finish program)
+    snake.KillSnake();
     
     Thread.Sleep(speed);
     Console.Clear();
