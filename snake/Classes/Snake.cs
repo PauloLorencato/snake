@@ -1,4 +1,5 @@
 using System.Globalization;
+using Food;
 
 namespace Snake
 {
@@ -9,6 +10,7 @@ namespace Snake
         public string[,] SnakeBody;
         public List<int[]> Changes;
         public int[] Direction;
+        private bool IsDead;
 
         public NewSnake()
         {
@@ -17,6 +19,7 @@ namespace Snake
             Direction = new int[2];
             Direction[0] = 0;
             Direction[1] = 1;
+            IsDead = false;
         }
 
         public string[,] CreateSnake()
@@ -44,6 +47,7 @@ namespace Snake
             int[] bounds = Changes[^1];
             if(bounds[0] >= 14 || bounds[0] <= 0 || bounds[1] >=14 || bounds[1] <= 0)
             {
+                IsDead = true;
                 return;
             }
             int[] coords = new int[2];
@@ -57,6 +61,29 @@ namespace Snake
                 Changes.RemoveAt(0);
             }
             return;
+        }
+
+        public void FeedSnake(ref NewFood newFood)
+        {
+            if(Changes[^1][0] == newFood.Place[0] && Changes[^1][1] == newFood.Place[1])
+            {
+                newFood.IsEaten = true;
+            }
+        }
+
+        public void KillSnake()
+        {
+            if(IsDead)
+            {
+                string gameOver = "G A M E  O V E R";
+                int j = 0;
+                for(int i = 0; i < gameOver.Length / 2; i += 1)
+                {
+                    SnakeBody[7,i + 3] = gameOver[j].ToString() + gameOver[j + 1].ToString();
+
+                    j += 2;
+                }
+            }
         }
     }
 }

@@ -15,7 +15,7 @@ public class NewFrame
                 Console.Write("|");
             for(int j = 0; j < 15; j += 1)
             {
-                if(snake[i,j] == "88")
+                if(snake[i,j] != "")
                 {
                     Console.Write(snake[i,j]);
                 }                
