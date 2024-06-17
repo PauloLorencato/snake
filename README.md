@@ -2,6 +2,8 @@
 
 A simple snake game that runs on console, made by me for skills improving reasons.
 
+Use WASD to control snake.
+
 To run, clone the repository then type:
 
 - cd snake
