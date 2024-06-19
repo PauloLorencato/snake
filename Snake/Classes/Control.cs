@@ -25,41 +25,46 @@ public class NewControl
         
         string command;
         while(true)
-        {                        
-            command = Console.ReadKey(true).Key.ToString();
-            Console.WriteLine("Novo comando: " + command);
-            switch(command)
+        {   
+            if(Console.KeyAvailable)
             {
-                case "P":
-                    Move(0, 0);
-                    break;
-                case "W":
-                    if(Direction[0] != 1 && Direction[1] != 0)
-                    {
-                        Move(-1,0);
-                    }                    
-                    break;
-                case "A":
-                    if(Direction[0] != 0 && Direction[1] != 1)
-                    {
-                        Move(0,-1);
-                    }                    
-                    break;
-                case "S":
-                    if(Direction[0] != -1 && Direction[1] != 0)
-                    {
-                        Move(1, 0);
-                    }                    
-                    break;
-                case "D":
-                    if(Direction[0] != 0 && Direction[1] != -1)
-                    {
-                        Move(0, 1);
-                    }                    
-                    break;
-                default:
-                    break;        
-            }
+                command = Console.ReadKey(true).Key.ToString();
+                Console.WriteLine("Novo comando: " + command);
+                switch(command)
+                {
+                    case "P":
+                        Move(0, 0);
+                        break;
+                    case "W":
+                        if(Direction[0] != 1 && Direction[1] != 0)
+                        {
+                            Move(-1,0);
+                        }                    
+                        break;
+                    case "A":
+                        if(Direction[0] != 0 && Direction[1] != 1)
+                        {
+                            Move(0,-1);
+                        }                    
+                        break;
+                    case "S":
+                        if(Direction[0] != -1 && Direction[1] != 0)
+                        {
+                            Move(1, 0);
+                        }                    
+                        break;
+                    case "D":
+                        if(Direction[0] != 0 && Direction[1] != -1)
+                        {
+                            Move(0, 1);
+                        }                    
+                        break;
+                    default:
+                        break;        
+                }
+                Thread.Sleep(1000);
+            }                     
+            
         }
         
     }

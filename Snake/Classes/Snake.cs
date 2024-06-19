@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using Food;
 
@@ -58,18 +59,29 @@ namespace Snake
             int[] coords = new int[2];
             coords[0] = Changes[^1][0] + direction[0];
             coords[1] = Changes[^1][1] + direction[1];
+
+            for(int i = 0; i < Changes.Count; i += 1)
+            {
+                if(Changes[i][0] == coords[0] && Changes[i][1] == coords[1])
+                {
+                    IsDead = true;
+                    return;
+                }
+            }
+
             if(!CheckRange(coords))
             {
                 SnakeBody[coords[0], coords[1]] = dot;
             }            
             Changes.Add(coords);
-            Console.WriteLine(coords[0].ToString());
                         
             if(!ate)
             {
                 SnakeBody[Changes[0][0], Changes[0][1]] = "";
                 Changes.RemoveAt(0);
             }
+
+            
             return;
         }
 

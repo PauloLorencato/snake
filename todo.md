@@ -1,0 +1,1 @@
+check food spawning on snake space (prob Changes error when eating)
